@@ -10,3 +10,5 @@ Description: A set of functions to perform statistical analysis
 License: `use_mit_license()`
 Encoding: UTF-8
 RoxygenNote: 7.2.3
+URL: https://github.com/annestaff/loglogisticdistribution
+BugReports: https://github.com/annestaff/loglogisticdistribution/issues
