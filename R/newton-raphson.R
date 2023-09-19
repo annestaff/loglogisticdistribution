@@ -5,18 +5,49 @@
 # 3. find the intersection of the tangent with the x axis and make it your new x
 # 4. repeat until you're close enough (delta-y below a certain threshold which defines that you're on a point)
 
+#' Calculate the alpha score
+#'
+#' @param x
+#' @param alpha
+#' @param beta
+#'
+#' @return
+#' @export
+#'
+#' @examples
 score_alpha <- function(x, alpha, beta) {
   n <- length(x)
   score <- -((n * beta) / alpha) + 2 * sum((beta / x) * ((x / alpha)^(beta - 1)) / (1 + (x / alpha)^beta))
   return(score)
 }
 
+#' Calculate the beta score
+#'
+#' @param x
+#' @param alpha
+#' @param beta
+#'
+#' @return
+#' @export
+#'
+#' @examples
 score_beta <- function(x, alpha, beta) {
   n <- length(x)
   score <- (n / beta) - (n * log(alpha)) + sum(log(x)) + 2 * sum(((x / alpha)^beta) * log(x / alpha) / (1 + (x / alpha)^beta))
   return(score)
 }
 
+#' Log-Logistic Hessian function
+#'
+#' @param x
+#' @param n
+#' @param alpha
+#' @param beta
+#'
+#' @return
+#' @export
+#'
+#' @examples
 loglogistic_hessian <- function(x, n, alpha, beta) {
   hessian <- matrix(0, nrow = 2, ncol = 2)
   xi <- x
@@ -28,6 +59,16 @@ loglogistic_hessian <- function(x, n, alpha, beta) {
 }
 
 
+#' Perform a Newton Raphson fit on the Log-Logistic distribution
+#'
+#' @param x
+#' @param params_0
+#' @param eps
+#'
+#' @return
+#' @export
+#'
+#' @examples
 NR_fit_LogLogistic_hessian <- function(x, params_0, eps = 0.00001)
 {
   params <- params_0

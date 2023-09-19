@@ -13,6 +13,15 @@
 # beta0 <- 2.2
 #####################################
 # censoring function, for a given quantile sets the max value and censors everything above
+#' Censoring a dataset
+#'
+#' @param x
+#' @param p
+#'
+#' @return
+#' @export
+#'
+#' @examples
 censor <- function(x, p = 0.9) {
   # for example the top 10% is everything above the 0.9 quantile
   top_ten <- quantile(x, p)
@@ -23,6 +32,17 @@ censor <- function(x, p = 0.9) {
 }
 #####################################
 # the montecarlo iteration for a given sample size
+#' Montecarlo experiment
+#'
+#' @param n
+#' @param I
+#' @param alpha0
+#' @param beta0
+#'
+#' @return
+#' @export
+#'
+#' @examples
 mc <- function(n, I, alpha0, beta0) {
   # initialise the matrices that will track the estimates throughout the iterations
   est <- matrix(nrow = 0, ncol = 2)
