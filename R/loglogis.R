@@ -5,10 +5,10 @@
 #' @param alpha
 #' @param beta
 #'
-#' @return
+#' @return frequency of the value x in a log-logistic distribution with parameters alpha and beta
 #' @export
 #'
-#' @examples
+#' @examples dloglogis(1, 3, 5)
 #'
 #'
 dloglogis <- function(x, alpha, beta) {
@@ -23,10 +23,10 @@ dloglogis <- function(x, alpha, beta) {
 #' @param alpha
 #' @param beta
 #'
-#' @return
+#' @return probability of the quantile q in a log-logistic distribution with parameters alpha and beta
 #' @export
 #'
-#' @examples
+#' @examples ploglogis(1, 1, 3)
 ploglogis <- function(q, alpha, beta) {
   res <- 1 / (1 + (q/alpha)^beta)
   return(res)
@@ -39,10 +39,10 @@ ploglogis <- function(q, alpha, beta) {
 #' @param alpha
 #' @param beta
 #'
-#' @return
+#' @return quantile with the probability p in a log-logistic distribution with parameters alpha and beta
 #' @export
 #'
-#' @examples
+#' @examples qloglogis(0.25, 1, 3)
 qloglogis <- function(p, alpha, beta) {
   res <- alpha * ((1/p) - 1)^(1/beta)
   return(res)
@@ -55,10 +55,10 @@ qloglogis <- function(p, alpha, beta) {
 #' @param alpha
 #' @param beta
 #'
-#' @return
+#' @return pseudo-randomly generated dataset following the log-logistic distribution with parameters alpha and beta
 #' @export
 #'
-#' @examples
+#' @examples rloglogis(1000, 3, 5)
 rloglogis <- function(n, alpha, beta) {
   u <- runif(n)  # Generate n random numbers from a uniform distribution
 

@@ -10,9 +10,13 @@ A package created for practising purposes made from functions created in the con
 
 In this project, we created the common functions around the Log-Logistic distribution in order to retrieve density, distribution, quantiles, as well as generate a random dataset based on given parametres.
 
-We also performed a Montecarlo experiment using censored and uncensored data as well as created a function which uses the Newton-Raphson-method to fit a distribution to a given dataset. 
-
 Please note that this package was created in order to learn about creating packages in R, so the documentation, testing, and other attributes might not seem sufficient according to common best practices.
+
+## Shiny app
+
+![App screenshot](https://github.com/annestaff/loglogisticdistribution/blob/master/app_screenshot.png?raw=true)
+
+The shiny app contained in this package was created for practising purposes. It show the histogram of a randomly generated dataset that follows a log-logistic distribution, allowing the user to adjust the sample size and parameters in real-time.
 
 ## Install me
 

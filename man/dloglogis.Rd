@@ -9,6 +9,14 @@ dloglogis(x, alpha, beta)
 \arguments{
 \item{beta}{}
 }
+\value{
+frequency of the value x in a log-logistic distribution with parameters alpha and beta
+}
 \description{
 The Log-Logistic Distribution
+}
+\examples{
+dloglogis(1, 3, 5)
+
+
 }

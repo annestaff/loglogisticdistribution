@@ -9,6 +9,12 @@ rloglogis(n, alpha, beta)
 \arguments{
 \item{beta}{}
 }
+\value{
+pseudo-randomly generated dataset following the log-logistic distribution with parameters alpha and beta
+}
 \description{
 The Log-Logistic Distribution
+}
+\examples{
+rloglogis(1000, 3, 5)
 }

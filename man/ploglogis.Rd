@@ -9,6 +9,12 @@ ploglogis(q, alpha, beta)
 \arguments{
 \item{beta}{}
 }
+\value{
+probability of the quantile q in a log-logistic distribution with parameters alpha and beta
+}
 \description{
 The Log-Logistic Distribution
+}
+\examples{
+ploglogis(1, 1, 3)
 }
