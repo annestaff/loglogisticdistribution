@@ -5,7 +5,7 @@
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-## Who am I
+## What is this package about
 A package created for practising purposes made from functions created in the context of a project for the module Advanced Statistics in the CMB master's programme of Aix-Marseille-University.
 
 In this project, we created the common functions around the Log-Logistic distribution in order to retrieve density, distribution, quantiles, as well as generate a random dataset based on given parametres.
@@ -18,7 +18,12 @@ Please note that this package was created in order to learn about creating packa
 
 The shiny app contained in this package was created for practising purposes. It show the histogram of a randomly generated dataset that follows a log-logistic distribution, allowing the user to adjust the sample size and parameters in real-time.
 
-## Install me
+To run the app, follow the installation instructions below and then run:
+```r
+runApp('R')
+```
+
+## Installation
 
 You can install the development version of loglogisticdistribution from [GitHub](https://github.com/) with:
 
